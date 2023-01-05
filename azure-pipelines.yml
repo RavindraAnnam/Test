@@ -39,8 +39,8 @@ stages:
           $(tag)
     - task: Docker@2
       inputs:
-        containerRegistry: 'tstacraq'
-        command: 'login'
+       containerRegistry: 'testacrreg'
+       command: 'login'
     - task: aquasecScanner@4
       inputs:
         image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
