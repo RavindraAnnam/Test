@@ -39,7 +39,7 @@ stages:
           $(tag)
     - task: aquasecScanner@4
       inputs:
-        image: 'tstacraq.azurecr.io:$(Build.BuildId)'
+        image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
         scanType: 'hosted'
         register: false
         hideBase: false
