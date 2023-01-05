@@ -40,7 +40,7 @@ stages:
     - task: aquasecScanner@4
       inputs:
         image: 'tstacraq.azurecr.io:$(Build.BuildId)'
-        scanType: 'local'
+        scanType: 'hosted'
         register: false
         hideBase: false
         showNegligible: false
