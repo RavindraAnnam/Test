@@ -37,3 +37,15 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+          - task: aquasecScanner@4
+            inputs:
+              image: '$(tag)'
+              scanType: 'local'
+              register: false
+              hideBase: false
+              showNegligible: false
+              windowsScannerVersion: '6.5.0'
+              registry: '$(imageRepository)'
+              connection: 'Aquascaner'
+
+
