@@ -49,8 +49,11 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
+        runOptions: '--privileged'
         registry: 'tstacraq'
         connection: 'Aquascaner'
+        scanMalware: true
+        registerCompliant: true
             
 
           
