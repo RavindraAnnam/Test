@@ -39,13 +39,16 @@ stages:
           $(tag)
           - task: aquasecScanner@4
             inputs:
-              image: ''
+              image: 'tstacraq.azurecr.io:$(Build.BuildId)'
               scanType: 'local'
               register: false
               hideBase: false
               showNegligible: false
               windowsScannerVersion: '6.5.0'
-              registry: '$(imageRepository)'
+              registry: 'tstacraq'
               connection: 'Aquascaner'
+
+          
+          
 
 
