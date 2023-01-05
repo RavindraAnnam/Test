@@ -39,7 +39,7 @@ stages:
           $(tag)
           - task: aquasecScanner@4
             inputs:
-              image: '$(tag)'
+              image: ''
               scanType: 'local'
               register: false
               hideBase: false
