@@ -43,7 +43,7 @@ stages:
             command: 'login'
     - task: aquasecScanner@4
       inputs:
-        image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
+        image: 'https://tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
         scanType: 'local'
         register: false
         hideBase: false
