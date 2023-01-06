@@ -35,5 +35,9 @@ stages:
               hideBase: false
               showNegligible: false
               windowsScannerVersion: '6.5.0'
+              - task: Docker@2
+                inputs:
+                  containerRegistry: 'tstacraq'
+                  command: 'push'
           
           
