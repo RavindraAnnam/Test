@@ -43,13 +43,12 @@ stages:
         command: 'login'
     - task: aquasecScanner@4
       inputs:
-           image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
-           scanType: 'local'
-           register: false
-           hideBase: false
-           showNegligible: false
-           windowsScannerVersion: '6.5.0'
-           registry: 'tstacraq'
-           connection: 'Aquascaner'
-           scanMalware: true
-           registerCompliant: true
+        image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
+        scanType: 'local'
+        register: false
+        hideBase: false
+        showNegligible: false
+        windowsScannerVersion: '6.5.0'
+        connection: 'Aquascaner'
+        scanMalware: true
+        registerCompliant: true
