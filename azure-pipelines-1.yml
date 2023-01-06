@@ -39,7 +39,7 @@ stages:
           $(tag)
     - task: Docker@2
       inputs:
-            containerRegistry: 'tstacraq'
+            containerRegistry: 'testacrreg'
             command: 'login'
     - task: aquasecScanner@4
       inputs:
