@@ -29,15 +29,15 @@ stages:
           $(tag)
     - task: aquasecScanner@4
       inputs:
-            image: '$(Build.BuildId)'
-            scanType: 'local'
-            register: false
-            hideBase: false
-            showNegligible: false
-            windowsScannerVersion: '6.5.0'
-            connection: 'Aquascaner'
-            scanMalware: true
-            registerCompliant: true
+        image: '$(Build.BuildId)'
+        scanType: 'local'
+        register: false
+        hideBase: false
+        showNegligible: false
+        windowsScannerVersion: '6.5.0'
+        connection: 'Aquascaner'
+        scanMalware: true
+        registerCompliant: true
     - task: Docker@2
       inputs:
                 containerRegistry: 'testacrreg'
