@@ -27,4 +27,13 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: |
           $(tag)
+          - task: aquasecScanner@4
+            inputs:
+              image: '$(Build.BuildId)'
+              scanType: 'local'
+              register: false
+              hideBase: false
+              showNegligible: false
+              windowsScannerVersion: '6.5.0'
+          
           
