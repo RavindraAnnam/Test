@@ -46,11 +46,9 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
-        runOptions: '--privileged'
-        registry: 'tstacraq'
+        scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner6.5'
         connection: 'Aquascaner'
         scanMalware: true
-        registerCompliant: true
             
 
           
