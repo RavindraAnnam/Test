@@ -43,13 +43,12 @@ stages:
     - task: aquasecScanner@4
       inputs:
         image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
-        scanType: 'dockerarchive'
+        scanType: 'local'
         register: true
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
         scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner6.5'
-        registry: 'acrregistryforciccdscanimages'
         connection: 'Aquascaner'
         scanMalware: true
         registerCompliant: true
