@@ -39,7 +39,7 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
-        scanner: 'tstacraq.azurecr.io/ravindraannamtest/ravindraannamtest/scanner6.5'
+        scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner6.5'
         connection: 'Aquascaner'
         scanMalware: true
     - task: Docker@2
