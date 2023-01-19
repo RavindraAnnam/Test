@@ -44,14 +44,13 @@ stages:
       inputs:
         image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
         scanType: 'local'
-        register: true
+        register: false
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
         scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner6.5'
         connection: 'Aquascaner'
         scanMalware: true
-        registerCompliant: true
             
 
           
