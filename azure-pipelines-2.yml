@@ -35,9 +35,9 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
+        scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner/6.5'
         connection: 'Aquascaner'
         scanMalware: true
-        registerCompliant: true
     - task: Docker@2
       inputs:
                 containerRegistry: 'testacrreg'
