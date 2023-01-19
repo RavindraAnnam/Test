@@ -31,6 +31,11 @@ stages:
       inputs:
         containerRegistry: 'testacrreg'
         command: 'login'
+    - task: Docker@2
+      inputs:
+         containerRegistry: 'testacrreg'
+         repository: 'ravindraannamtest'
+         command: 'push'
     - task: aquasecScanner@4
       inputs:
         image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
@@ -42,10 +47,6 @@ stages:
         scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner6.5'
         connection: 'Aquascaner'
         scanMalware: true
-    - task: Docker@2
-      inputs:
-                containerRegistry: 'testacrreg'
-                repository: 'ravindraannamtest'
-                command: 'push'
+
           
           
