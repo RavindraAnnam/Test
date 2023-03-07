@@ -38,11 +38,8 @@ stages:
         tags: '$(tag)'
     - task: Bash@3
       inputs:
-       targetType: 'inline'
-       script: |
-         docker login -ukrvravi@gmail.com jfroaquaintegrationtest.jfrog.io
-         
-         -p cmVmdGtuOjAxOjE3MDk3MTIyNzE6M3VqWUxUT2dPNWw2SGI3eURCZUYwWG9EeFFH
+        targetType: 'inline'
+        script: 'docker login -ukrvravi@gmail.com jfroaquaintegrationtest.jfrog.io -p cmVmdGtuOjAxOjE3MDk3MTIyNzE6M3VqWUxUT2dPNWw2SGI3eURCZUYwWG9EeFFH'
     - task: aquasecScanner@4
       inputs:
         image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
