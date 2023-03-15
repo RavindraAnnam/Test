@@ -48,7 +48,7 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
-        scanner: 'tstacraq.azurecr.io/ravindraannamtest/scanner6.5'
+        scanner: 'vntvglobal-aquasec.jfrog.io/aquasec/scannerlatest'
         connection: 'Aquascaner'
         scanMalware: true
             
