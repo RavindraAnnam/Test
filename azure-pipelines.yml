@@ -40,6 +40,12 @@ stages:
       inputs:
         containerRegistry: 'testacrreg'
         command: 'login'
+    - task: ArtifactoryDocker@1
+      inputs:
+        command: 'pull'
+        artifactoryService: 'Aquasecjfrogserviceconnection'
+        sourceRepo: 'aquasec-local'
+        imageName: 'scannerlatest'
     - task: aquasecScanner@4
       inputs:
         image: 'tstacraq.azurecr.io/ravindraannamtest:$(Build.BuildId)'
