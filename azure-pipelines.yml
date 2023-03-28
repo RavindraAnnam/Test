@@ -52,7 +52,7 @@ stages:
         hideBase: false
         showNegligible: false
         windowsScannerVersion: '6.5.0'
-        scanner: 'vntvglobal-aquasec.jfrog.io/artifactory/aquasec/scanner:latest'
+        scanner: 'evntvglobal-aquasec.jfrog.io/artifactory/aquasec/scanner'
         connection: 'Aquascaner'
         scanMalware: true
             
